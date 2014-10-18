@@ -1,0 +1,52 @@
+#/usr/bin/env bash
+
+set -e
+
+function is_file() {
+    if [ ! -f $1 ]; then
+        return 0
+    fi
+    return 1
+}
+
+
+usage() {
+    cat << EOF
+usage: $0 options
+
+OPTIONS:
+  -h Show help message
+  -u
+  -d
+EOF
+}
+
+
+while [[ $# > 0 ]]
+do
+    key="$1"
+    shift
+
+    case $key in
+        -h|--help)
+            usage
+            exit 0
+            ;;
+        -u|--upload-file)
+            upload_file="$1"
+            shift
+            ;;
+        *)
+            echo 'Unknown option.\n'
+            usage
+            exit 1
+            ;;
+    esac
+done
+
+
+if [ ! -z "$upload_file" ]; then
+    echo "Now we are uploading $upload_file"
+    echo "You can download the file $upload_file by the following url:"
+    curl --upload-file $upload_file https://transfer.sh/tranfer
+fi
