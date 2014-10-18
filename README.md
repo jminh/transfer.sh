@@ -17,4 +17,14 @@ you can easily upload/download your files from the command-line
   - Files are stored for 14 days
   - For free
 
+# Usage
 
+usage: transfer [-h] [-u FILE]
+  -h, --help show this help message and exit
+  -u, --upload-file specify the path of the file you want to upload
+
+**Example1: Upload a file**
+```
+    # Upload a file to https://transfer.sh
+    $./transfer -u /path/to/file
+```
