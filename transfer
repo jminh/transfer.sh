@@ -15,8 +15,8 @@ usage() {
 usage: $0 options
 
 OPTIONS:
-  -h Show help message
-  -u
+  -h, --help show this help message and exit
+  -u, --upload-file specify the path of the file you want to upload.
   -d
 EOF
 }
