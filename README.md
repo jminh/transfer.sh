@@ -20,8 +20,10 @@ you can easily upload/download your files from the command-line
 # Usage
 
 usage: transfer [-h] [-u FILE]
-  -h, --help show this help message and exit
-  -u, --upload-file specify the path of the file you want to upload
+
+## optional arguments:
+    -h, --help show this help message and exit
+    -u, --upload-file specify the path of the file you want to upload
 
 **Example1: Upload a file**
 ```
