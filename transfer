@@ -36,6 +36,10 @@ do
             upload_file="$1"
             shift
             ;;
+        -d|--download-file)
+            download_file="$1"
+            shift
+            ;;
         *)
             echo 'Unknown option.\n'
             usage
@@ -49,4 +53,10 @@ if [ ! -z "$upload_file" ]; then
     echo "Now we are uploading $upload_file"
     echo "You can download the file $upload_file by the following url:"
     curl --upload-file $upload_file https://transfer.sh/tranfer
+fi
+
+
+if [ ! -z "$download_file" ]; then
+    echo "Now we are downloading "${download_file##*/}.
+    curl -s ${download_file} -o ./${download_file##*/}
 fi
