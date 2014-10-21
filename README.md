@@ -24,9 +24,16 @@ usage: transfer [-h] [-u FILE]
 ## optional arguments:
     -h, --help show this help message and exit
     -u, --upload-file specify the path of the file you want to upload
+    -d, --download-url specify the url that you want to download.
 
 **Example1: Upload a file**
 ```
     # Upload a file to https://transfer.sh
     $./transfer -u /path/to/file
+```
+
+**Example2: Download a file**
+```
+    # Download a file from https://transfer.sh/1gYMVr/tranfer
+    $./transfer -d https://transfer.sh/1gYMVr/tranfer
 ```
