@@ -17,7 +17,7 @@ usage: $0 options
 OPTIONS:
   -h, --help show this help message and exit
   -u, --upload-file specify the path of the file you want to upload.
-  -d
+  -d, --download-url specify the url you want to download.
 EOF
 }
 
