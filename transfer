@@ -52,7 +52,7 @@ done
 if [ ! -z "$upload_file" ]; then
     echo "Now we are uploading $upload_file"
     echo "You can download the file $upload_file by the following url:"
-    curl --upload-file $upload_file https://transfer.sh/tranfer
+    curl --upload-file $upload_file https://transfer.sh/$(basename $upload_file)
 fi
 
 
