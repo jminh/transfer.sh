@@ -19,7 +19,7 @@ you can easily upload/download your files from the command-line
 
 # Usage
 
-usage: transfer [-h] [-u FILE]
+usage: transfer [-h] [-u FILE] [-d URL]
 
 ## optional arguments:
     -h, --help show this help message and exit
