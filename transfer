@@ -10,6 +10,15 @@ function is_file() {
 }
 
 
+function arrange_work_path() {
+    if [ -z "$1" ]; then
+        echo '.'
+        exit # ? return
+    fi
+    echo "$1"
+}
+
+
 usage() {
     cat << EOF
 usage: $0 options
@@ -40,6 +49,10 @@ do
             download_url="$1"
             shift
             ;;
+        -w|--work)
+            work_path="$1"
+            shift
+            ;;
         *)
             echo 'Unknown option.\n'
             usage
@@ -57,6 +70,17 @@ fi
 
 
 if [ ! -z "$download_url" ]; then
+    save_dir=$(arrange_work_path $work_path)
+    echo $save_dir
+    if [ ! -d "$save_dir" ]; then
+        echo "$work_path is not a valid directory."
+        echo "$save_dir is not a valid directory."
+        exit 1
+    fi
+
+    echo "We'll save file(s) into the directory: $save_dir"
     echo "Now we are downloading "${download_url##*/}.
-    curl -s ${download_url} -o ./${download_url##*/}
+    curl -s ${download_url} -o ${save_dir}/${download_url##*/}
 fi
+
+
