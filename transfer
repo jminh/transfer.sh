@@ -27,6 +27,7 @@ OPTIONS:
   -h, --help show this help message and exit
   -u, --upload-file specify the path of the file you want to upload.
   -d, --download-url specify the url you want to download.
+  -w, --work specify the directory that you want to download.
 EOF
 }
 
