@@ -1,14 +1,14 @@
 transfer.sh
 ===========
 
-https://transfer.sh/
+Share your files by transfer.sh (https://transfer.sh/)
 
 transfer.sh (https://transfer.sh/) is a service to
 share your files.
 You can upload you files on that web site.
 
 With transfer (a simpe wrapper for transfer.sh),
-you can easily upload/download your files from the command-line
+you can easily upload/download your files from the command-line.
 
 # Features
 
