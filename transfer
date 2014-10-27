@@ -23,6 +23,9 @@ usage() {
     cat << EOF
 usage: $0 options
 
+transfer is simple wrapper for transfer.sh (https://transfer.sh)
+With transfer, you can share your files from the command-line.
+
 OPTIONS:
   -h, --help show this help message and exit
   -u, --upload-file specify the path of the file you want to upload.
