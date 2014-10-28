@@ -45,3 +45,9 @@ usage: transfer [-h] [-u FILE] [-d URL] [-w DIR]
     $./transfer -d https://transfer.sh/1gYMVr/tranfer -w /path/to/directory
 ```
 
+
+# Reference
+
+  + https://transfer.sh/
+
+  + https://github.com/dutchcoders/transfer.sh/
