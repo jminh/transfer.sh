@@ -71,6 +71,9 @@ if [ ! -z "$upload_file" ]; then
         echo "Now we are uploading $upload_file"
         echo "You can download the file $upload_file by the following url:"
         curl --upload-file $upload_file https://transfer.sh/$(basename $upload_file)
+
+        echo
+        echo "File(s) you upload expire automaticlly in 14 days."
     else
         echo "$upload_file is not a valid file."
         echo "\n[Tip] If you want to upload a directory, you need to compress it to zip(or tar, ...)"
